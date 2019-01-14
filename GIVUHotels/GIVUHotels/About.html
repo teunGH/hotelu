@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="Width=device-width">
+    <meta name="description" content="GivuHotels">
+    <meta name="keywords" content="Verhuizen, Arnhem, Vervoeren">
+    <meta ame="author" content="Annabel Jansen">
+	<title>GIVUHotels | Preferences</title>
+	<link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+	<header>
+      <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">GIVU</span>Hotels</h1>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li class="current"><a href="About.html">ADJUST STAY</a></li>
+                <li><a href="Services.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section id="showcase">
+          <div class="container">
+           <img src="IMG/backgroundbook.jpg">
+          </div>
+      </section>
+<form name="bookform">
+    <p>What is your full name please?
+        <input type="text" name="name" value="Annabel Jansen">
+    <p>What's your location of interest?
+        <select name="favourite">
+            <option value="Givu Amsterdam">Amsterdam</option>
+            <option value="GivU Utrecht">Utrecht</option>
+            <option value="Givu Arnhem">Arnhem</option>
+        </select>
+    </p>
+    <p>How many guest can we expect?
+        <select name="guests">
+            <option value="Number of guests: Two">2</option>
+            <option value="Number of guests: Three">3</option>
+            <option value="Number of guests: Four">4</option>
+            <option value="Number of guests: Over 4">4+</option>
+        </select>
+    </p>
+    <p>Are you bringing your siblings?
+    	<select name="children">
+            <option value="No children">0</option>
+            <option value="One child">1</option>
+            <option value="Two children">2</option>
+            <option value="Two or more children">2+</option>
+        </select>
+    </p>
+    <p>When will U arrive?
+    	<input type="text" name="arrive" value="dd/mm/yy do we arrive">
+    </p>
+    <p>When will U leave us?
+    	<input type="text" name="leave" value="dd/mm/yy do we leave U">
+    </p>
+    <p>How about dinner and such?
+    	<select name="food">
+            <option value="We just want breakfast">Just breakfast</option>
+            <option value="We just want dinner">Only dinner</option>
+            <option value="We would like both breakfast and dinner">Both please!</option>
+            <option value="We're not leaviing, afully stocked fridge please">Stock our fridge with all U got!</option>
+        </select>
+    </p>
+    <p>Do U have a coupon or discount code?
+    	<input type="text" name="coupon" value="Code...">
+    </p>
+    <p>Do U have special needs or attendencies?
+    	<input type="text" name="special" value="Allergies, personal wishes, wheelchair accomodations..">
+    </p>
+        <p><input type="submit" onclick="check(); return false"></p>
+    </p>      
+</form>
+<p id="f1"></p>
+<p id="f2"></p>
+<p id="f3"></p>
+<p id="f4"></p>
+<p id="f5"></p>
+<p id="f6"></p>
+<p id="f7"></p>
+<p id="f8"></p>
+<p id="f9"></p>
+
+      <footer>
+       <p>GIVUHotels webdevelopmemt Copyright &copy; 2019</p>
+    	<div>
+        <img src="IMG/footer%20betaalmogelijkheden.jpg">
+    	</div>
+      </footer>
+      <script type="text/javascript">
+      	function check() {
+      		document.getElementById("f1").innerHTML = document.bookform.name.value;
+      		document.getElementById("f2").innerHTML = document.bookform.favourite.value;
+      		document.getElementById("f3").innerHTML = document.bookform.guests.value;
+      		document.getElementById("f4").innerHTML = document.bookform.children.value;
+      		document.getElementById("f5").innerHTML = document.bookform.arrive.value;
+      		document.getElementById("f6").innerHTML = document.bookform.leave.value;
+      		document.getElementById("f7").innerHTML = document.bookform.food.value;
+      		document.getElementById("f8").innerHTML = document.bookform.coupon.value;
+      		document.getElementById("f9").innerHTML = document.bookform.special.value;
+      	}
+      </script>
+</body>
+</html>
